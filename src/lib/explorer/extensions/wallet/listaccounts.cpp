@@ -47,9 +47,6 @@ console_result listaccounts::invoke (std::ostream& output,
         std::ostream& cerr, libbitcoin::server::server_node& node)
 {
     auto& blockchain = node.chain_impl();
-    blockchain.is_account_passwd_valid(auth_.name, auth_.auth);
-    if(!blockchain.is_admin_account(auth_.name))
-        throw account_authority_exception{"you are not admin account!"};
     
     auto sh_vec = blockchain.get_accounts();
     

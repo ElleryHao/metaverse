@@ -101,7 +101,7 @@
 #include <metaverse/explorer/extensions/wallet/encodeattachtx.hpp>
 #include <metaverse/explorer/extensions/commands/private_query.hpp>
 #include <metaverse/explorer/extensions/wallet/getmemorypool.hpp>
-
+#include <metaverse/explorer/extensions/wallet/listaccounts.hpp>
 
 
 namespace libbitcoin {
@@ -333,7 +333,8 @@ shared_ptr<command> find_extension(const string& symbol)
         return make_shared<stopall>();
     if (symbol == getmemorypool::symbol())
         return make_shared<getmemorypool>();
-
+    if (symbol == listaccounts::symbol())
+        return make_shared<listaccounts>();
     return nullptr;
 }
 

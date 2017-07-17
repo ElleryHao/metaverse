@@ -156,7 +156,6 @@ shared_ptr<command> find(const string& symbol)
         return make_shared<tx_sign>();
     if (symbol == validate_tx::symbol())
         return make_shared<validate_tx>();
-
     return find_extension(symbol);
 }
 

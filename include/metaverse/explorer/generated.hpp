@@ -61,7 +61,6 @@
 #include <metaverse/explorer/commands/tx-sign.hpp>
 #include <metaverse/explorer/commands/validate-tx.hpp>
 #include <metaverse/explorer/define.hpp>
-
 /********* GENERATED SOURCE CODE, DO NOT EDIT EXCEPT EXPERIMENTALLY **********/
 
 namespace libbitcoin {
